@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class VictorHugoBatista\Gravity2RDStation\Gravity2RDStation | Gravity2RDStation</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Gravity2RDStation</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-VictorHugoBatista.Gravity2RDStation.html" title="Summary of VictorHugoBatista\Gravity2RDStation"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-VictorHugoBatista.html">
+							VictorHugoBatista<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-VictorHugoBatista.Gravity2RDStation.html">
+							Gravity2RDStation						</a>
+							</li>
+								</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html">Gravity2RDStation</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Gravity2RDStation</h1>
+
+
+	<div class="description">
+	<p>Responsável pelo envio dos dados
+de um formulário ao RD Station.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-VictorHugoBatista.html">VictorHugoBatista</a>\<a href="namespace-VictorHugoBatista.Gravity2RDStation.html">Gravity2RDStation</a><br>
+		<b>Package:</b> VictorHugoBatista\Gravity2RDStation\Integrations<br>
+
+			<b>Located at</b> <a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#7-97" title="Go to source code">Gravity2RDStation/Gravity2RDStation.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#32-41" title="Go to source code">__construct</a>( <span> <var>$token_private_rdstation</var></span>, <span> <var>$token_rdstation</var></span> )</code>
+
+			<div class="description short">
+				<p>Gravity2RDStation constructor.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Gravity2RDStation constructor.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$token_private_rdstation</var></dt>
+						<dd>privado da API do RD Station.</dd>
+						<dt><var>$token_rdstation</var></dt>
+						<dd>público da API do RD Station.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="send_lead" id="_send_lead">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_send_lead">#</a>
+			<code><a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#43-75" title="Go to source code">send_lead</a>( <span>Form <var>$form</var></span>, <span>Entry <var>$entry</var></span> )</code>
+
+			<div class="description short">
+				<p>Envia lead gerado pelo Gravity Forms ao RD Station.
+Preferencialmente chamado no hook 'gform-confirmation'.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Envia lead gerado pelo Gravity Forms ao RD Station.
+Preferencialmente chamado no hook 'gform-confirmation'.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$form</var></dt>
+						<dd>Formulário onde o lead foi gerado.</dd>
+						<dt><var>$entry</var></dt>
+						<dd>Lead gerado pelo Gravity Forms.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>Resultado da operação de envio do lead.
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							https://www.gravityhelp.com/documentation/article/gform_confirmation/<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_array_lead" id="_generate_array_lead">
+
+			<td class="attributes"><code>
+				 private 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_array_lead">#</a>
+			<code><a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#77-96" title="Go to source code">generate_array_lead</a>( <span>Form <var>$form</var></span>, <span>Entry <var>$entry</var></span> )</code>
+
+			<div class="description short">
+				<p>Gera um array associativo com as informações do lead.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Gera um array associativo com as informações do lead.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$form</var></dt>
+						<dd>Formulário onde o lead foi gerado.</dd>
+						<dt><var>$entry</var></dt>
+						<dd>Lead gerado pelo Gravity Forms.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Lead estruturado em um array associativo.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="rd_station_api" id="$rd_station_api">
+			<td class="attributes"><code>
+				private  
+				VictorHugoBatista\Integrations\RDStationAPI
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#14-18" title="Go to source code"><var>$rd_station_api</var></a>
+
+				<div class="description short">
+					<p>Conexão com a API do RD Station.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Conexão com a API do RD Station.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$rd_station_api" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="email_variations" id="$email_variations">
+			<td class="attributes"><code>
+				private static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#20-24" title="Go to source code"><var>$email_variations</var></a>
+
+				<div class="description short">
+					<p>Variações da palavra 'email', para fins de comparação.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Variações da palavra 'email', para fins de comparação.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$email_variations" class="anchor">#</a>
+					<code>[<span class="php-quote">'e-mail'</span>, <span class="php-quote">'email'</span>]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="email_default" id="$email_default">
+			<td class="attributes"><code>
+				private static 
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-VictorHugoBatista.Gravity2RDStation.Gravity2RDStation.html#26-30" title="Go to source code"><var>$email_default</var></a>
+
+				<div class="description short">
+					<p>Valor padrão do email do lead (o envio de leads sem email não é permitido).</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Valor padrão do email do lead (o envio de leads sem email não é permitido).</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$email_default" class="anchor">#</a>
+					<code><span class="php-quote">'mail@mail.com'</span></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Gravity2RDStation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

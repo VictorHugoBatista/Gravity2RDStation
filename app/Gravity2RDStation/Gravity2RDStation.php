@@ -2,7 +2,7 @@
 
 namespace VictorHugoBatista\Gravity2RDStation;
 
-use VictorHugoBatista\Gravity2RDStation\Integrations\RDStationAPI;
+use VictorHugoBatista\Integrations\RDStationAPI;
 
 /**
  * Responsável pelo envio dos dados
@@ -13,7 +13,7 @@ class Gravity2RDStation
 {
     /**
      * Conexão com a API do RD Station.
-     * @var RDStationAPI
+     * @var \VictorHugoBatista\Integrations\RDStationAPI
      */
     private $rd_station_api;
 
@@ -42,6 +42,8 @@ class Gravity2RDStation
 
     /**
      * Envia lead gerado pelo Gravity Forms ao RD Station.
+     * Preferencialmente chamado no hook 'gform-confirmation'.
+     * @see https://www.gravityhelp.com/documentation/article/gform_confirmation/
      * @param Form $form Formulário onde o lead foi gerado.
      * @param Entry $entry Lead gerado pelo Gravity Forms.
      * @return bool Resultado da operação de envio do lead.

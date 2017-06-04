@@ -1,6 +1,6 @@
 <?php
 
-namespace VictorHugoBatista\Gravity2RDStation\Integrations;
+namespace VictorHugoBatista\Integrations;
 
 /**
  * Responsável pela comunicação com a api do RD Station.
@@ -11,10 +11,15 @@ namespace VictorHugoBatista\Gravity2RDStation\Integrations;
  */
 class RDStationAPI {
     public $token;
+
     public $privateToken;
+
     public $baseURL = "https://www.rdstation.com.br/api/";
+
     public $apiVersion = "1.2";
+
     public $defaultIdentifier = "rdstation-php-integration";
+
     public function __construct($privateToken=NULL, $token=NULL){
         if(empty($privateToken)) throw new Exception("Inform RDStationAPI.privateToken as the first argument.");
         $this->token = $token;
