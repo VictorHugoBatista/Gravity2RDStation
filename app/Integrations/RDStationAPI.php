@@ -1,6 +1,6 @@
 <?php
 
-namespace VictorHugoBatista\Gravity2RDStation\Integrations;
+namespace VictorHugoBatista\Integrations;
 
 /**
  * Responsável pela comunicação com a api do RD Station.

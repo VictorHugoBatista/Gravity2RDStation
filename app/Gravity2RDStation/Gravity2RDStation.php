@@ -2,7 +2,7 @@
 
 namespace VictorHugoBatista\Gravity2RDStation;
 
-use VictorHugoBatista\Gravity2RDStation\Integrations\RDStationAPI;
+use VictorHugoBatista\Integrations\RDStationAPI;
 
 /**
  * Responsável pelo envio dos dados
@@ -13,7 +13,7 @@ class Gravity2RDStation
 {
     /**
      * Conexão com a API do RD Station.
-     * @var \VictorHugoBatista\Gravity2RDStation\Integrations\RDStationAPI
+     * @var \VictorHugoBatista\Integrations\RDStationAPI
      */
     private $rd_station_api;
 
