@@ -12,5 +12,8 @@
         "psr-4": {
             "VictorHugoBatista\\": "app/"
         }
+    },
+    "require-dev": {
+        "apigen/apigen": "^4.1"
     }
 }
