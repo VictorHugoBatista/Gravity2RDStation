@@ -53,6 +53,10 @@ class Gravity2RDStation
         // Adiciona valores padão aos dados à ser enviados.
         $email_lead = self::$email_default;
         $form_lead = [];
+
+        // Inicializa o identificador com o título do formulário.
+        $form_lead['identificador'] = (array_key_exists('title', $form)) ? $form['title'] : '';
+
         $form_lead = array_merge(
             $this->generate_array_lead($form, $entry),
             $form_lead
