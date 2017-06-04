@@ -1,0 +1,16 @@
+{
+    "name": "victorhugobatista/gravity2rdstation",
+    "description": "Interface who sends your Gravity Forms Leads to RD Station",
+    "authors": [
+        {
+            "name": "Victor Hugo Batista",
+            "email": "vct.bta@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "VictorHugoBatista\\": "app/"
+        }
+    }
+}
