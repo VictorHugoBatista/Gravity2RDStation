@@ -67,8 +67,7 @@ class Gravity2RDStation
         // $email_lead, removendo do array $form_lead.
         foreach (array_keys($form_lead) as $form_lead_key) {
             $form_lead_key_lower = strtolower($form_lead_key);
-            array_flip(self::$email_variations);
-            if (array_key_exists($form_lead_key_lower, $email_variations)) {
+            if (in_array($form_lead_key_lower, $email_variations)) {
                 $email_lead = $form_lead[$form_lead_key];
                 unset($form_lead[$form_lead_key]);
                 break;
