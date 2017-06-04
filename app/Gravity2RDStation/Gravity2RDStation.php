@@ -88,13 +88,7 @@ class Gravity2RDStation
     {
         $lead = [];
         foreach ( $form['fields'] as $form_field ) {
-            if ( 'Tipo de lead' === $form_field->label ) {
-                $lead['identificador'] = $entry[ $form_field->id ];
-            } else {
-                // Adiciona todos os dados do formulário no array de leads, com
-                // exceção do campo email - armazenada em uma variável própria.
-                $lead[ $form_field->label ] = $entry[ $form_field->id ];
-            }
+            $lead[ $form_field->label ] = $entry[ $form_field->id ];
         }
         return $lead;
     }
