@@ -53,9 +53,13 @@ class Gravity2RDStation
         // Adiciona valores padão aos dados à ser enviados.
         $email_lead = self::$email_default;
         $form_lead = [];
+
+        // Inicializa o identificador com o título do formulário.
+        $form_lead['identificador'] = (array_key_exists('title', $form)) ? $form['title'] : '';
+
         $form_lead = array_merge(
-            $this->generate_array_lead($form, $entry),
-            $form_lead
+            $form_lead,
+            $this->generate_array_lead($form, $entry)
         );
         $email_variations = array_flip(self::$email_variations);
 
@@ -63,8 +67,7 @@ class Gravity2RDStation
         // $email_lead, removendo do array $form_lead.
         foreach (array_keys($form_lead) as $form_lead_key) {
             $form_lead_key_lower = strtolower($form_lead_key);
-            array_flip(self::$email_variations);
-            if (array_key_exists($form_lead_key_lower, $email_variations)) {
+            if (in_array($form_lead_key_lower, $email_variations)) {
                 $email_lead = $form_lead[$form_lead_key];
                 unset($form_lead[$form_lead_key]);
                 break;
@@ -84,13 +87,7 @@ class Gravity2RDStation
     {
         $lead = [];
         foreach ( $form['fields'] as $form_field ) {
-            if ( 'Tipo de lead' === $form_field->label ) {
-                $lead['identificador'] = $entry[ $form_field->id ];
-            } else {
-                // Adiciona todos os dados do formulário no array de leads, com
-                // exceção do campo email - armazenada em uma variável própria.
-                $lead[ $form_field->label ] = $entry[ $form_field->id ];
-            }
+            $lead[ $form_field->label ] = $entry[ $form_field->id ];
         }
         return $lead;
     }
