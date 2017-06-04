@@ -3,7 +3,7 @@
 Interface who sends your Gravity Forms Leads to RD Station.
 
 Use example:
-```
+```PHP
 function do_gform_confirmation($confirmation, $form, $entry, $ajax) {
   $gravity_to_rdstation =
     new Gravity2RDStation('<your-rdstation-public-token>', '<your-rdstation-public-token>');
