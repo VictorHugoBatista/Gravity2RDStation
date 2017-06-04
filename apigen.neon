@@ -1,0 +1,16 @@
+title: 'Gravity2RDStation'
+
+templateTheme: 'bootstrap'
+
+destination: 'doc'
+
+source:
+    - 'app/'
+
+exclude:
+     - Integrations/ # third party integration class
+
+accessLevels:
+     - public
+     - private
+     - protected
