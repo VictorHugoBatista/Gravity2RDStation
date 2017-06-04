@@ -58,8 +58,8 @@ class Gravity2RDStation
         $form_lead['identificador'] = (array_key_exists('title', $form)) ? $form['title'] : '';
 
         $form_lead = array_merge(
-            $this->generate_array_lead($form, $entry),
-            $form_lead
+            $form_lead,
+            $this->generate_array_lead($form, $entry)
         );
         $email_variations = array_flip(self::$email_variations);
 
